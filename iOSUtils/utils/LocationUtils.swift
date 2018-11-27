@@ -1,13 +1,13 @@
 //  LocationUtils.swift
 //  iOSUtils
 //
-//  Created by Wushhhhhh on 2018/8/25.
+//  Created by Wushhhhhh on 2017/8/25.
 //  Copyright © 2018年 wushhhhhh. All rights reserved.
+//
 //  开发者文档：https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009497-CH1-SW1
-//  info.plist 添加权限
+//  添加权限
 //  1. Privacy - Location When In Use Usage Description
 //  2. Privacy - Location Always and When In Use Usage Description
-//  3. 需要联网
 import Foundation
 import CoreLocation
 

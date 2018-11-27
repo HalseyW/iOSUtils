@@ -15,3 +15,6 @@ class ViewController: UIViewController {
     
 }
 
+extension String {
+    static let UserName = "username"
+}
