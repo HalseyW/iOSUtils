@@ -1,20 +1,17 @@
-//
-//  ViewController.swift
-//  iOSUtils
-//
-//  Created by HalseyW-15 on 2018/11/21.
-//  Copyright © 2018年 wushhhhhh. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var btnTest: UIButton!
+    @IBOutlet weak var tvTest: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func clickBtnTest(_ sender: UIButton) {
+        tvTest.text = "clickBtnTest"
+    }
+    
 }
 
