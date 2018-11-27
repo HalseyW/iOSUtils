@@ -10,11 +10,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clickBtnTest(_ sender: UIButton) {
-        tvTest.text = "clickBtnTest"
     }
     
-}
-
-extension String {
-    static let UserName = "username"
 }
