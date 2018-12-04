@@ -15,43 +15,7 @@ extension UIView {
     /**
      默认底部，默认时间1s
      */
-    func makeToast(message: String) {
-        let toast = getToastView(message: message)
-        toast.alpha = 0
-        toast.center = ToastPosition.bottom.getPosition(forToast: toast, inSuperView: self)
-        self.addSubview(toast)
-        
-        showToast(toast, duration: 1)
-    }
-    
-    /**
-     默认底部，自定义时间
-     */
-    func makeToast(message: String, duration: TimeInterval) {
-        let toast = getToastView(message: message)
-        toast.alpha = 0
-        toast.center = ToastPosition.bottom.getPosition(forToast: toast, inSuperView: self)
-        self.addSubview(toast)
-        
-        showToast(toast, duration: duration)
-    }
-    
-    /**
-     自定义位置，默认时间1s
-     */
-    func makeToast(message: String, position: ToastPosition = .bottom) {
-        let toast = getToastView(message: message)
-        toast.alpha = 0
-        toast.center = position.getPosition(forToast: toast, inSuperView: self)
-        self.addSubview(toast)
-        
-        showToast(toast, duration: 1)
-    }
-    
-    /**
-     自定义位置，自定义时间
-     */
-    func makeToast(message: String, duration: TimeInterval, position: ToastPosition) {
+    func makeToast(message: String, duration: TimeInterval = 1.0, position: ToastPosition = .bottom) {
         let toast = getToastView(message: message)
         toast.alpha = 0
         toast.center = position.getPosition(forToast: toast, inSuperView: self)
