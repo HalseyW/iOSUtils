@@ -5,17 +5,14 @@
 //  Created by Wushhhhhh on 2017/8/25.
 //  Copyright © 2018年 wushhhhhh. All rights reserved.
 //
-
+//1. 非必要权限，在用的地方请求，且只请求一次。
+//2. 必要权限先提示再请求，被拒绝时弹框并提供跳转到设置的选项。
+//3. 多个必要权限，单独界面提供单独按钮，点击按钮后请求，被拒绝时弹框并提供跳转到设置的选项。
 import Foundation
-import AVFoundation
 import UIKit
 
-class PermissionUtils: NSObject {
-    static let cameraUsageDescription = "NSCameraUsageDescription"
-    static let micUsageDescription = "NSMicrophoneUsageDescription"
-    static let photoUsageDescription = "NSPhotoLibraryUsageDescription"
-
-    typealias Callback = (PermissionStatus) -> Void
+class Permission: NSObject {
+    internal typealias Callback = (PermissionStatus) -> Void
     var callback: Callback?
 
     lazy var deniedAlert: DeniedAlert = {return DeniedAlert(permissionUtils: self)}()
@@ -23,7 +20,7 @@ class PermissionUtils: NSObject {
     lazy var preAlert: PreAlert = {return PreAlert(permissionUtils: self)}()
     var shouldPresentDeniedAlert = true
     var shouldPresentCancelAlert = true
-    var shouldCancelPreAlert = true
+    var shouldPresentPreAlert = true
     
     let permissionType: PermissionType
     var permissionStatus: PermissionStatus {
@@ -52,7 +49,7 @@ class PermissionUtils: NSObject {
         case .notDetermined:
             shouldPresentCancelAlert ? preAlert.present() : requestPermission(callbacks(_:))
         case .restricted:
-            shouldCancelPreAlert ? cancelAlert.present() : callbacks(status)
+            shouldPresentPreAlert ? cancelAlert.present() : callbacks(status)
         }
     }
     
@@ -71,32 +68,5 @@ class PermissionUtils: NSObject {
         DispatchQueue.main.async {
             self.callback?(self.permissionStatus)
         }
-    }
-}
-
-enum PermissionType: String {
-    case Camera = "Camera"
-    case Mic = "Mic"
-    case Photo = "Photo"
-}
-
-enum PermissionStatus: String {
-    case authorized = "authorized"
-    case denied = "denied"
-    case notDetermined = "notDetermined"
-    case restricted = "restricted"
-}
-
-extension UIApplication {
-    var topViewController: UIViewController? {
-        var vc = delegate?.window??.rootViewController
-        while let presentedVC = vc?.presentedViewController {
-            vc = presentedVC
-        }
-        return vc
-    }
-
-    func presentViewController(_ viewController: UIViewController) {
-        topViewController?.present(viewController, animated: true, completion: nil)
     }
 }

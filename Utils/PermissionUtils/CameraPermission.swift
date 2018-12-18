@@ -11,7 +11,7 @@ import AVFoundation
 import Photos
 
 //Camera
-extension PermissionUtils {
+extension Permission {
     var cameraPermissionStatus: PermissionStatus {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
         switch status {
@@ -23,8 +23,8 @@ extension PermissionUtils {
     }
     
     func requestCamera(_ callback: @escaping Callback) {
-        guard let _ = Bundle.main.object(forInfoDictionaryKey: PermissionUtils.cameraUsageDescription) else {
-            print("WARNING: \(PermissionUtils.cameraUsageDescription) is missing in Info.plist")
+        guard let _ = Bundle.main.object(forInfoDictionaryKey: String.cameraUsageDescription) else {
+            print("WARNING: \(String.cameraUsageDescription) is missing in Info.plist")
             return
         }
         AVCaptureDevice.requestAccess(for: .video) { (_) in
@@ -34,7 +34,7 @@ extension PermissionUtils {
 }
 
 //Microphone
-extension PermissionUtils {
+extension Permission {
     var micPermissionStatus: PermissionStatus {
         let status = AVCaptureDevice.authorizationStatus(for: .audio)
         switch status {
@@ -46,8 +46,8 @@ extension PermissionUtils {
     }
     
     func requestMic(_ callback: @escaping Callback) {
-        guard let _ = Bundle.main.object(forInfoDictionaryKey: PermissionUtils.micUsageDescription) else {
-            print("WARNING: \(PermissionUtils.micUsageDescription) is missing in Info.plist")
+        guard let _ = Bundle.main.object(forInfoDictionaryKey: String.micUsageDescription) else {
+            print("WARNING: \(String.micUsageDescription) is missing in Info.plist")
             return
         }
         AVCaptureDevice.requestAccess(for: .audio) { (_) in
@@ -57,7 +57,7 @@ extension PermissionUtils {
 }
 
 //Photo
-extension PermissionUtils {
+extension Permission {
     var photoPermissionStatus: PermissionStatus {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
@@ -69,8 +69,8 @@ extension PermissionUtils {
     }
     
     func requestPhotos(_ callback: @escaping Callback) {
-        guard let _ = Bundle.main.object(forInfoDictionaryKey: PermissionUtils.photoUsageDescription) else {
-            print("WARNING: \(PermissionUtils.photoUsageDescription) not found in Info.plist")
+        guard let _ = Bundle.main.object(forInfoDictionaryKey: String.photoUsageDescription) else {
+            print("WARNING: \(String.photoUsageDescription) not found in Info.plist")
             return
         }
         

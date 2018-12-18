@@ -6,11 +6,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let p = PermissionUtils.init(type: .Photo)
-        
-        p.request { (status) in
-            print(status.rawValue)
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

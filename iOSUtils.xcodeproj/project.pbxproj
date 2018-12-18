@@ -12,6 +12,9 @@
 		7708141F21ACD3E1000C3238 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708141E21ACD3E1000C3238 /* LocationUtils.swift */; };
 		774FC74D21C8A352005553D3 /* CameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC74C21C8A352005553D3 /* CameraPermission.swift */; };
 		774FC74F21C8AC2D005553D3 /* PermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */; };
+		774FC75521C8DF1C005553D3 /* PermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC75421C8DF1C005553D3 /* PermissionType.swift */; };
+		774FC75721C8DF34005553D3 /* PermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC75621C8DF34005553D3 /* PermissionStatus.swift */; };
+		774FC75921C8E145005553D3 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC75821C8E145005553D3 /* Other.swift */; };
 		7757C7CF21A4F26F0037999C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7CE21A4F26F0037999C /* AppDelegate.swift */; };
 		7757C7D121A4F26F0037999C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7D021A4F26F0037999C /* ViewController.swift */; };
 		7757C7D421A4F26F0037999C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7757C7D221A4F26F0037999C /* Main.storyboard */; };
@@ -20,7 +23,7 @@
 		7757C7E421A4F2700037999C /* iOSUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7E321A4F2700037999C /* iOSUtilsTests.swift */; };
 		7757C7EF21A4F2700037999C /* iOSUtilsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7EE21A4F2700037999C /* iOSUtilsUITests.swift */; };
 		7757C7FE21A4FBD80037999C /* ToastUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7FD21A4FBD80037999C /* ToastUtils.swift */; };
-		7757C80021A4FBEA0037999C /* PermissionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7FF21A4FBEA0037999C /* PermissionUtils.swift */; };
+		7757C80021A4FBEA0037999C /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7FF21A4FBEA0037999C /* Permission.swift */; };
 		7757C80221A4FBF30037999C /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C80121A4FBF30037999C /* FileUtils.swift */; };
 		7757C80421A4FBFC0037999C /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C80321A4FBFC0037999C /* DeviceUtils.swift */; };
 		D5B4301553DC7E7ADF0B6CFB /* Pods_iOSUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C076324AE2857104CA3303 /* Pods_iOSUtilsTests.framework */; };
@@ -54,6 +57,9 @@
 		7708141E21ACD3E1000C3238 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
 		774FC74C21C8A352005553D3 /* CameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermission.swift; sourceTree = "<group>"; };
 		774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAlert.swift; sourceTree = "<group>"; };
+		774FC75421C8DF1C005553D3 /* PermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionType.swift; sourceTree = "<group>"; };
+		774FC75621C8DF34005553D3 /* PermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionStatus.swift; sourceTree = "<group>"; };
+		774FC75821C8E145005553D3 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		7757C7CB21A4F26F0037999C /* iOSUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7757C7CE21A4F26F0037999C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7757C7D021A4F26F0037999C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +74,7 @@
 		7757C7EE21A4F2700037999C /* iOSUtilsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUtilsUITests.swift; sourceTree = "<group>"; };
 		7757C7F021A4F2700037999C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7757C7FD21A4FBD80037999C /* ToastUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastUtils.swift; sourceTree = "<group>"; };
-		7757C7FF21A4FBEA0037999C /* PermissionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionUtils.swift; sourceTree = "<group>"; };
+		7757C7FF21A4FBEA0037999C /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		7757C80121A4FBF30037999C /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		7757C80321A4FBFC0037999C /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		9361F7A2966C7F1609C0164E /* Pods_iOSUtilsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSUtilsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,20 +111,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		774FC75021C8ACA2005553D3 /* Permission */ = {
+		774FC75021C8ACA2005553D3 /* PermissionUtils */ = {
 			isa = PBXGroup;
 			children = (
-				7757C7FF21A4FBEA0037999C /* PermissionUtils.swift */,
+				7757C7FF21A4FBEA0037999C /* Permission.swift */,
+				774FC75421C8DF1C005553D3 /* PermissionType.swift */,
+				774FC75621C8DF34005553D3 /* PermissionStatus.swift */,
 				774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */,
 				774FC74C21C8A352005553D3 /* CameraPermission.swift */,
+				774FC75821C8E145005553D3 /* Other.swift */,
 			);
-			path = Permission;
+			path = PermissionUtils;
+			sourceTree = "<group>";
+		};
+		774FC75A21C8E591005553D3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				774FC75021C8ACA2005553D3 /* PermissionUtils */,
+				7757C7FD21A4FBD80037999C /* ToastUtils.swift */,
+				7757C80121A4FBF30037999C /* FileUtils.swift */,
+				7757C80321A4FBFC0037999C /* DeviceUtils.swift */,
+				7708141C21ACD3A6000C3238 /* UserDefaultUtils.swift */,
+				7708141E21ACD3E1000C3238 /* LocationUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7757C7C221A4F26F0037999C = {
 			isa = PBXGroup;
 			children = (
 				7757C7CD21A4F26F0037999C /* iOSUtils */,
+				774FC75A21C8E591005553D3 /* Utils */,
 				7757C7E221A4F2700037999C /* iOSUtilsTests */,
 				7757C7ED21A4F2700037999C /* iOSUtilsUITests */,
 				7757C7CC21A4F26F0037999C /* Products */,
@@ -140,7 +163,6 @@
 		7757C7CD21A4F26F0037999C /* iOSUtils */ = {
 			isa = PBXGroup;
 			children = (
-				7757C7FC21A4FBB70037999C /* utils */,
 				7757C7CE21A4F26F0037999C /* AppDelegate.swift */,
 				7757C7D021A4F26F0037999C /* ViewController.swift */,
 				7757C7D221A4F26F0037999C /* Main.storyboard */,
@@ -167,19 +189,6 @@
 				7757C7F021A4F2700037999C /* Info.plist */,
 			);
 			path = iOSUtilsUITests;
-			sourceTree = "<group>";
-		};
-		7757C7FC21A4FBB70037999C /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				774FC75021C8ACA2005553D3 /* Permission */,
-				7757C7FD21A4FBD80037999C /* ToastUtils.swift */,
-				7757C80121A4FBF30037999C /* FileUtils.swift */,
-				7757C80321A4FBFC0037999C /* DeviceUtils.swift */,
-				7708141C21ACD3A6000C3238 /* UserDefaultUtils.swift */,
-				7708141E21ACD3E1000C3238 /* LocationUtils.swift */,
-			);
-			path = utils;
 			sourceTree = "<group>";
 		};
 		8F52182243D917A217C31F1B /* Pods */ = {
@@ -398,13 +407,16 @@
 			files = (
 				7708141F21ACD3E1000C3238 /* LocationUtils.swift in Sources */,
 				7757C7FE21A4FBD80037999C /* ToastUtils.swift in Sources */,
+				774FC75721C8DF34005553D3 /* PermissionStatus.swift in Sources */,
+				774FC75521C8DF1C005553D3 /* PermissionType.swift in Sources */,
 				7757C80421A4FBFC0037999C /* DeviceUtils.swift in Sources */,
 				7757C7D121A4F26F0037999C /* ViewController.swift in Sources */,
 				774FC74D21C8A352005553D3 /* CameraPermission.swift in Sources */,
-				7757C80021A4FBEA0037999C /* PermissionUtils.swift in Sources */,
+				7757C80021A4FBEA0037999C /* Permission.swift in Sources */,
 				7708141D21ACD3A6000C3238 /* UserDefaultUtils.swift in Sources */,
 				7757C7CF21A4F26F0037999C /* AppDelegate.swift in Sources */,
 				7757C80221A4FBF30037999C /* FileUtils.swift in Sources */,
+				774FC75921C8E145005553D3 /* Other.swift in Sources */,
 				774FC74F21C8AC2D005553D3 /* PermissionAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

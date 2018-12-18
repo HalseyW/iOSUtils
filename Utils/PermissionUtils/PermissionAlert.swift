@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 internal class PermissionAlert {
-    fileprivate let permissionUtils: PermissionUtils
+    fileprivate let permissionUtils: Permission
     fileprivate var status: PermissionStatus {return permissionUtils.permissionStatus}
     fileprivate var type: PermissionType {return permissionUtils.permissionType}
-    fileprivate var callbacks: PermissionUtils.Callback {return permissionUtils.callbacks}
+    fileprivate var callbacks: Permission.Callback {return permissionUtils.callbacks}
     
     var title = "This is a dedault title"
     var message = "This is a dedault message"
     var defaulCancelActionTitle = "Cancel"
     
-    fileprivate init(permissionUtils: PermissionUtils) {
+    fileprivate init(permissionUtils: Permission) {
         self.permissionUtils = permissionUtils
     }
     
@@ -44,7 +44,7 @@ internal class PermissionAlert {
 class DeniedAlert: PermissionAlert {
     var defaultActionTitle = "Setting"
     
-    internal override init(permissionUtils: PermissionUtils) {
+    internal override init(permissionUtils: Permission) {
         super.init(permissionUtils: permissionUtils)
     }
     
@@ -69,7 +69,7 @@ class DeniedAlert: PermissionAlert {
 }
 
 class CancelAlert: PermissionAlert {
-    internal override init(permissionUtils: PermissionUtils) {
+    internal override init(permissionUtils: Permission) {
         super.init(permissionUtils: permissionUtils)
     }
 }
@@ -77,7 +77,7 @@ class CancelAlert: PermissionAlert {
 class PreAlert: PermissionAlert {
     var defaultConfirmActionTitle = "Confirm"
     
-    internal override init(permissionUtils: PermissionUtils) {
+    internal override init(permissionUtils: Permission) {
         super.init(permissionUtils: permissionUtils)
     }
     
