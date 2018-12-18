@@ -10,6 +10,8 @@
 		05E2978C693B9040FF0632F1 /* Pods_iOSUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF79F566FA4FCFB5C2B8E0C /* Pods_iOSUtils.framework */; };
 		7708141D21ACD3A6000C3238 /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708141C21ACD3A6000C3238 /* UserDefaultUtils.swift */; };
 		7708141F21ACD3E1000C3238 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708141E21ACD3E1000C3238 /* LocationUtils.swift */; };
+		774FC74D21C8A352005553D3 /* CameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC74C21C8A352005553D3 /* CameraPermission.swift */; };
+		774FC74F21C8AC2D005553D3 /* PermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */; };
 		7757C7CF21A4F26F0037999C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7CE21A4F26F0037999C /* AppDelegate.swift */; };
 		7757C7D121A4F26F0037999C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C7D021A4F26F0037999C /* ViewController.swift */; };
 		7757C7D421A4F26F0037999C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7757C7D221A4F26F0037999C /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		6A13B6A555DE844A73C490E6 /* Pods-iOSUtilsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUtilsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUtilsUITests/Pods-iOSUtilsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7708141C21ACD3A6000C3238 /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		7708141E21ACD3E1000C3238 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
+		774FC74C21C8A352005553D3 /* CameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermission.swift; sourceTree = "<group>"; };
+		774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAlert.swift; sourceTree = "<group>"; };
 		7757C7CB21A4F26F0037999C /* iOSUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7757C7CE21A4F26F0037999C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7757C7D021A4F26F0037999C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		774FC75021C8ACA2005553D3 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				7757C7FF21A4FBEA0037999C /* PermissionUtils.swift */,
+				774FC74E21C8AC2D005553D3 /* PermissionAlert.swift */,
+				774FC74C21C8A352005553D3 /* CameraPermission.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
 		7757C7C221A4F26F0037999C = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +172,8 @@
 		7757C7FC21A4FBB70037999C /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				774FC75021C8ACA2005553D3 /* Permission */,
 				7757C7FD21A4FBD80037999C /* ToastUtils.swift */,
-				7757C7FF21A4FBEA0037999C /* PermissionUtils.swift */,
 				7757C80121A4FBF30037999C /* FileUtils.swift */,
 				7757C80321A4FBFC0037999C /* DeviceUtils.swift */,
 				7708141C21ACD3A6000C3238 /* UserDefaultUtils.swift */,
@@ -386,10 +400,12 @@
 				7757C7FE21A4FBD80037999C /* ToastUtils.swift in Sources */,
 				7757C80421A4FBFC0037999C /* DeviceUtils.swift in Sources */,
 				7757C7D121A4F26F0037999C /* ViewController.swift in Sources */,
+				774FC74D21C8A352005553D3 /* CameraPermission.swift in Sources */,
 				7757C80021A4FBEA0037999C /* PermissionUtils.swift in Sources */,
 				7708141D21ACD3A6000C3238 /* UserDefaultUtils.swift in Sources */,
 				7757C7CF21A4F26F0037999C /* AppDelegate.swift in Sources */,
 				7757C80221A4FBF30037999C /* FileUtils.swift in Sources */,
+				774FC74F21C8AC2D005553D3 /* PermissionAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +518,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -556,6 +573,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -566,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83LX8MTQKZ;
+				DEVELOPMENT_TEAM = 82KL4YM2V6;
 				INFOPLIST_FILE = iOSUtils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83LX8MTQKZ;
+				DEVELOPMENT_TEAM = 82KL4YM2V6;
 				INFOPLIST_FILE = iOSUtils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -6,7 +6,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let p = PermissionUtils.init(type: .Photo)
+        
+        p.request { (status) in
+            print(status.rawValue)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -14,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clickBtnTest(_ sender: UIButton) {
-        PermissionUtils.init().jumpToSetting(controller: self, title: "fdsa", message: "fdsafdsa", defaultAction: "去设置", isJumpToSetting: true, cancelAction: "取消")
+        
     }
-    
+
 }
