@@ -12,17 +12,19 @@ import Foundation
 import UIKit
 
 class Permission: NSObject {
+    //回调
     internal typealias Callback = (PermissionStatus) -> Void
     var callback: Callback?
-
+    //拒绝/取消/预先提醒的提示框
     lazy var deniedAlert: DeniedAlert = {return DeniedAlert(permissionUtils: self)}()
     lazy var cancelAlert: CancelAlert = {return CancelAlert(permissionUtils: self)}()
     lazy var preAlert: PreAlert = {return PreAlert(permissionUtils: self)}()
     var shouldPresentDeniedAlert = true
     var shouldPresentCancelAlert = true
     var shouldPresentPreAlert = true
-    
+    //权限类型
     let permissionType: PermissionType
+    //权限状态
     var permissionStatus: PermissionStatus {
         switch permissionType {
         case .Camera:
@@ -37,7 +39,10 @@ class Permission: NSObject {
     init(type: PermissionType) {
         self.permissionType = type
     }
-
+    
+    /**
+     暴露的请求接口
+     */
     func request(_ callback: @escaping Callback) {
         self.callback = callback
         let status = permissionStatus
@@ -53,6 +58,9 @@ class Permission: NSObject {
         }
     }
     
+    /**
+     根据类型判断请求方法
+     */
     internal func requestPermission(_ callback: @escaping Callback) {
         switch permissionType {
         case .Camera:
@@ -64,6 +72,9 @@ class Permission: NSObject {
         }
     }
     
+    /**
+     回调方法
+     */
     internal func callbacks(_ with: PermissionStatus) {
         DispatchQueue.main.async {
             self.callback?(self.permissionStatus)
