@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class FileUtils: NSObject {
+    override init() {
+        
+    }
+}
